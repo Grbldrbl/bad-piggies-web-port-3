@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<script src="https://happygamer1450.github.io/Ruffle-Embedded/ruffle/ruffle.js"></script>
-<div class="swf"dir="ltr" style="text-align: left;" trbidi="on">
-        <embed height="480" pluginspage=" http://www.macromedia.com/go/getflashplayer" src="Bad-Piggies-3.swf" type="application/x-shockwave-flash" width="620"></embed>
-</div>
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+
+    window.addEventListener("DOMContentLoaded", () => {
+        let ruffle = window.RufflePlayer.newest();
+        let player = ruffle.createPlayer();
+        let container = document.getElementById("container");
+        container.appendChild(player);
+        player.ruffle().load("Bad-Piggies-3.swf");
+    });
+</script>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
