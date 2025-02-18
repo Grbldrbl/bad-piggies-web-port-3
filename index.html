@@ -15,6 +15,16 @@
 <body>
 <div id='ruffle' class="gameloc"></div>
 <script src='https://maddox05.github.io/ruffle-example/ruffle/index.js'></script> <!-- Theses files should be local -->
-<script id = "gabe">swfobject.embedSWF("Bad Piggies 3.4.swf", 'ruffle', 800, 600);</script> <!-- Theses files should be local -->
+<script id = "gabe"> window.RufflePlayer = window.RufflePlayer || {};
+  window.addEventListener("load", (event) => {
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    const container = document.getElementById("ruffle");
+    player.style.width = "1366px";
+    player.style.height = "768px";
+    container.appendChild(player);
+    player.load(" window.RufflePlayer = window.RufflePlayer || {};
+
+  });</script> <!-- Theses files should be local -->
 </body>
 </html>
